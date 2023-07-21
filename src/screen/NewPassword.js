@@ -11,7 +11,7 @@ import {useNavigation} from '@react-navigation/native';
 import {Neomorph} from 'react-native-neomorph-shadows';
 import {widthPercentageToDP as wp} from 'react-native-responsive-screen';
 import Entypo from 'react-native-vector-icons/Entypo';
-import { AppColor } from '../assets/colors/AppColor';
+import {AppColor} from '../assets/colors/AppColor';
 
 const NewPassword = () => {
   //States
@@ -35,18 +35,13 @@ const NewPassword = () => {
             <Text style={NewPasswordStyle.subHeadingText}>
               Enter New Password
             </Text>
-            <View
-              style={{
-                flexDirection: 'row',
-                alignItems: 'center',
-                justifyContent: 'center',
-              }}>
+            <View style={NewPasswordStyle.innerInputView}>
               <TextInput
                 value={email}
                 secureTextEntry={!passwordShow}
                 placeholder="At least 8 digits"
-                placeholderTextColor="#E3D1BF"
-                style={[NewPasswordStyle.inputStyle, {width: wp('80')}]}
+                placeholderTextColor={AppColor.primaryBlush}
+                style={NewPasswordStyle.firstInputStyle}
                 onChangeText={text => {
                   setEmail(text);
                 }}
@@ -80,7 +75,7 @@ const NewPassword = () => {
               value={email}
               secureTextEntry={!passwordShow}
               placeholder="********"
-              placeholderTextColor="#E3D1BF"
+              placeholderTextColor={AppColor.primaryBlush}
               style={NewPasswordStyle.inputStyle}
               onChangeText={text => {
                 setEmail(text);
@@ -90,7 +85,7 @@ const NewPassword = () => {
 
           <View style={NewPasswordStyle.lineStyle}></View>
           <TouchableOpacity
-            style={{paddingTop: wp('7')}}
+            style={NewPasswordStyle.buttonView}
             onPress={() => {
               navigation.replace('Congrats');
             }}>

@@ -33,7 +33,7 @@ const ForgotPassword = () => {
               onPress={() => {
                 navigation.replace('Login');
               }}>
-              <AntDesign name="left" size={wp('5')} color={'white'} />
+              <AntDesign name="left" size={wp('5')} color={AppColor.white} />
             </TouchableOpacity>
           </View>
           <Text style={ForgotPasswordStyle.headingText}>Forgot Password</Text>
@@ -43,7 +43,7 @@ const ForgotPassword = () => {
           </Text>
 
           <View style={ForgotPasswordStyle.inputView}>
-            <Fontisto name="email" size={wp('5')} color={'white'} />
+            <Fontisto name="email" size={wp('5')} color={AppColor.white} />
             <TextInput
               value={email}
               placeholder="Email/Username"

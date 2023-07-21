@@ -16,7 +16,18 @@ const AppColor = {
     pinterestSvg: require('../images/pinterest.png'),
     linkedinSvg: require('../images/linkedin.png'),
     shadowImage: require('../images/shadow.png'),
+    imageEdit: require('../images/imageEdit.png'),
+    profileImage: require('../images/profileImage.jpg'),
     seccondShadowImage: require('../images/shadow2.png'),
+    mustang: require('../images/mustang.png'),
+    carStearing: require('../images/carStearing.png'),
+    LC: require('../images/LC.png'),
+    LC2: require('../images/LC2.png'),
+    fuel: require('../images/fuel.png'),
+    lighBulb: require('../images/lightBulb.png'),
+    drawer: require('../images/drawerImage.png'),
+    placeHolderColor: '#797979',
+    white: '#FFFFFF',
 
 };
 

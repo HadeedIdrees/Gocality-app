@@ -31,7 +31,7 @@ const SignUp = () => {
           resizeMode="cover">
           <View style={SignUpStyle.childView}>
             <Text style={SignUpStyle.headingText}>Sign Up</Text>
-            <View style={{flexDirection: 'row'}}>
+            <View style={SignUpStyle.subHeadingView}>
               <Text style={SignUpStyle.subHeadingText}>
                 Don't have an account?
               </Text>
@@ -47,7 +47,7 @@ const SignUp = () => {
               <View>
                 <TextInput
                   placeholder="First Name"
-                  placeholderTextColor="#797979"
+                  placeholderTextColor={AppColor.placeHolderColor}
                   style={SignUpStyle.inputStyle}
                   onChangeText={text => {
                     setEmail(text);
@@ -58,7 +58,7 @@ const SignUp = () => {
               <View>
                 <TextInput
                   placeholder="Last Name"
-                  placeholderTextColor="#797979"
+                  placeholderTextColor={AppColor.placeHolderColor}
                   style={SignUpStyle.inputStyle}
                   onChangeText={text => {
                     setEmail(text);
@@ -70,7 +70,7 @@ const SignUp = () => {
 
             <TextInput
               placeholder="Last Name"
-              placeholderTextColor="#797979"
+              placeholderTextColor={AppColor.placeHolderColor}
               style={SignUpStyle.inputStyle1}
               onChangeText={text => {
                 setEmail(text);
@@ -80,7 +80,7 @@ const SignUp = () => {
 
             <TextInput
               placeholder="Last Name"
-              placeholderTextColor="#797979"
+              placeholderTextColor={AppColor.placeHolderColor}
               style={SignUpStyle.inputStyle1}
               onChangeText={text => {
                 setEmail(text);
@@ -90,7 +90,7 @@ const SignUp = () => {
 
             <TextInput
               placeholder="Last Name"
-              placeholderTextColor="#797979"
+              placeholderTextColor={AppColor.placeHolderColor}
               style={SignUpStyle.inputStyle1}
               onChangeText={text => {
                 setEmail(text);
@@ -102,7 +102,7 @@ const SignUp = () => {
               onPress={() => {
                 console.log('Hello');
               }}
-              style={{paddingTop: wp('7')}}>
+              style={SignUpStyle.buttonView}>
               <Neomorph style={SignUpStyle.buttonStyle}>
                 <Text style={SignUpStyle.buttonTextColor}>Sign Up</Text>
               </Neomorph>

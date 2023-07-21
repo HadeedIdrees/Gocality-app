@@ -25,7 +25,7 @@ const Congrats = () => {
         source={AppColor.shadowImage}
         style={CongratsStyle.imageStyle}
         resizeMode="cover">
-        <View style={{flex: 1}}></View>
+        <View style={CongratsStyle.flex}></View>
         <View style={CongratsStyle.childView}>
           <Image
             source={AppColor.congratsSvg}
@@ -41,7 +41,7 @@ const Congrats = () => {
             <AntDesign name="arrowright" size={wp('8')} color={'black'} />
           </TouchableOpacity>
         </View>
-        <View style={{flex: 1}}></View>
+        <View style={CongratsStyle.flex}></View>
       </ImageBackground>
     </ImageBackground>
   );

@@ -31,15 +31,15 @@ const Intro = () => {
         </View>
 
         <View style={IntroStyle.secondViewStyle}>
-          <Text style={[IntroStyle.textStyle, {color: 'white'}]}>
+          <Text style={IntroStyle.subHeadingText}>
             Find Your drive
           </Text>
           <TouchableOpacity
             onPress={() => {
               navigation.navigate('SignUp');
             }}>
-            <Neomorph style={IntroStyle.buttonStyle}>
-              <Text style={[IntroStyle.textStyle, {color: '#214D5A'}]}>
+            <Neomorph style={IntroStyle.signUpButton}>
+              <Text style={IntroStyle.textStyle}>
                 Sign Up
               </Text>
             </Neomorph>
@@ -49,8 +49,8 @@ const Intro = () => {
               navigation.replace('Login');
             }}>
             <Neomorph
-              style={[IntroStyle.buttonStyle, {backgroundColor: '#214D5A'}]}>
-              <Text style={[IntroStyle.textStyle, {color: 'white'}]}>
+              style={IntroStyle.loginButton}>
+              <Text style={IntroStyle.subHeadingText}>
                 Login
               </Text>
             </Neomorph>
