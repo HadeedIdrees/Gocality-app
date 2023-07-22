@@ -35,15 +35,6 @@ const TabBar = () => {
           ),
         }}
       />
-      <Tab.Screen
-        name="Car"
-        component={ReserveCar}
-        options={{
-          tabBarIcon: ({focused}) => (
-            <FontAwesome5 name="car-alt" size={wp('5')} color={focused ? AppColor.primaryTeal : '#928B8B'} />
-          ),
-        }}
-      />
     </Tab.Navigator>
   );
 };

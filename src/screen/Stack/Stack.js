@@ -12,15 +12,13 @@ import SignUp from '../SignUp';
 import EditProfile from '../EditProfile';
 import TabBar from '../TabBar/TabBar';
 import ReserveCar from '../ReserveCar';
+import Filter from '../../assets/components/Filter/Filter';
 
 const Stack = () => {
   const Stack = createNativeStackNavigator();
   return (
     <NavigationContainer>
       <Stack.Navigator screenOptions={{headerShown: false}}>
-        <Stack.Screen name="TabBar" component={TabBar} />
-        <Stack.Screen name="ReserveCar" component={ReserveCar} />
-        <Stack.Screen name="EditProfile" component={EditProfile} />
         <Stack.Screen name="Splash" component={Splash} />
         <Stack.Screen name="Intro" component={Intro} />
         <Stack.Screen name="Login" component={Login} />
@@ -28,6 +26,10 @@ const Stack = () => {
         <Stack.Screen name="NewPassword" component={NewPassword} />
         <Stack.Screen name="Congrats" component={Congrats} />
         <Stack.Screen name="SignUp" component={SignUp} />
+        <Stack.Screen name="TabBar" component={TabBar} />
+        <Stack.Screen name="EditProfile" component={EditProfile} />
+        <Stack.Screen name="ReserveCar" component={ReserveCar} />
+        <Stack.Screen name="Filter" component={Filter} />
       </Stack.Navigator>
     </NavigationContainer>
   );

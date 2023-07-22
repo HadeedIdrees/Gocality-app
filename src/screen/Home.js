@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {
   View,
   Text,
@@ -6,20 +6,18 @@ import {
   Image,
   TouchableOpacity,
   FlatList,
-  ImageBackground,
 } from 'react-native';
 import {widthPercentageToDP as wp} from 'react-native-responsive-screen';
 import {HomeStyle} from '../assets/style/HomeStyle';
 import {AppColor} from '../assets/colors/AppColor';
-import Entypo from 'react-native-vector-icons/Entypo';
 import AntDesign from 'react-native-vector-icons/AntDesign';
-import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import MaterialIcon from 'react-native-vector-icons/MaterialIcons';
 import {Neomorph} from 'react-native-neomorph-shadows';
 import ServiceList from '../assets/components/Services/ServiceList';
 import HomeDrawer from '../assets/components/Drawer/HomeDrawer';
 import Header from '../assets/components/Header/Header';
+import {useNavigation} from '@react-navigation/native';
 
 const Home = () => {
   //States
@@ -41,9 +39,17 @@ const Home = () => {
     },
   ]);
 
+  //Variables
+  const navigation = useNavigation();
+
   const serviceRenderItem = ({item}) => {
     return <ServiceList item={item} />;
   };
+
+  //useEffect
+  useEffect(() => {
+    console.log("OOO")
+  });
 
   return (
     <ScrollView style={HomeStyle.scrollView}>
@@ -54,7 +60,11 @@ const Home = () => {
           }}
         />
 
-        <TouchableOpacity style={HomeStyle.filterIcon}>
+        <TouchableOpacity
+          style={HomeStyle.filterIcon}
+          onPress={() => {
+            navigation.navigate('Filter');
+          }}>
           <MaterialIcon name="tune" size={wp('7')} color={'black'} />
         </TouchableOpacity>
 
