@@ -18,9 +18,8 @@ import {LoginStyle} from '../assets/style/LoginStyle';
 import {useNavigation} from '@react-navigation/native';
 import {AppColor} from '../assets/colors/AppColor';
 import {
-   
   statusCodes,
-  GoogleSignin
+  GoogleSignin,
 } from '@react-native-google-signin/google-signin';
 
 const Login = () => {
@@ -41,7 +40,7 @@ const Login = () => {
       console.log('due-----', userInfo);
       setUser(userInfo);
     } catch (error) {
-      console.log('User', user)
+      console.log('User', user);
       console.log('Message-----', error.message);
       if (error.code === statusCodes.SIGN_IN_CANCELLED) {
         console.log('User cancelled the Login Flow');
@@ -93,7 +92,8 @@ const Login = () => {
   //Use Effect
   useEffect(() => {
     GoogleSignin.configure({
-      webClientId: "307211734525-kuqt52fvp9lhkimdokdk2gq71jkvsds0.apps.googleusercontent.com",
+      webClientId:
+        '307211734525-kuqt52fvp9lhkimdokdk2gq71jkvsds0.apps.googleusercontent.com',
     });
     isSignedIn();
   }, []);
@@ -177,7 +177,7 @@ const Login = () => {
           </TouchableOpacity>
           <TouchableOpacity
             onPress={() => {
-              console.log('Hello');
+              navigation.navigate('TabBar');
             }}
             style={LoginStyle.buttonView}>
             <Neomorph style={LoginStyle.buttonStyle}>
@@ -189,8 +189,7 @@ const Login = () => {
         <View style={LoginStyle.childView3}>
           <Text style={LoginStyle.subHeadingText}>or connect with</Text>
           <View style={LoginStyle.socialView}>
-            <TouchableOpacity
-              onPress={signIn}>
+            <TouchableOpacity onPress={signIn}>
               <Image
                 source={AppColor.linkedinSvg}
                 style={LoginStyle.socialImageStyle}

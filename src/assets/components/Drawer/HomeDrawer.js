@@ -16,14 +16,19 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 import {widthPercentageToDP as wp} from 'react-native-responsive-screen';
 import {HomeStyle} from '../../style/HomeStyle';
 import {AppColor} from '../../colors/AppColor';
+import {useNavigation} from '@react-navigation/native';
 
 const HomeDrawer = ({onPress}) => {
+  //Variable
+  const navigation = useNavigation();
+
+  //State
   const [drawerList, setDrawerList] = useState([
     {
       id: 1,
       name: 'Overview Page',
       onPress: () => {
-        console.log('Hello');
+        navigation.navigate('Home');
       },
       iconProvider: (
         <MaterialCommunityIcons
@@ -37,7 +42,7 @@ const HomeDrawer = ({onPress}) => {
       id: 2,
       name: 'Reserve a Car',
       onPress: () => {
-        console.log('Hello');
+        navigation.navigate('ReserveCar');
       },
       iconProvider: (
         <FontAwesome5 name="car-alt" size={wp('5')} color={'black'} />
